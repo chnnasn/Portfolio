@@ -1,10 +1,14 @@
 # 作品集
 
-> 游戏引擎 / C++ 系统与图形 / Unity 游戏开发 / Web 与桌面工具
+> 游戏引擎 / C++ 系统与图形 / Unity 游戏开发 / 桌面工具
 
-本作品集按 GitHub **创建时间从新到旧** 排列。
+本作品集按技术方向划分为 3 个模块；每个模块中的项目按 GitHub **创建时间从新到旧** 排列。
 
-## 01 · Butter（2026.08）
+## C++ 引擎与基础库
+
+聚焦引擎架构、底层系统、物理仿真与 ECS 基础设施。
+
+### Butter（2026.08）
 
 **技术栈：** C++20、CMake、物理引擎、GJK/EPA、PBD
 
@@ -17,20 +21,7 @@
 
 **链接：** [源码](https://github.com/chnnasn/Butter)
 
-## 02 · DeepSeek-Harness-Desktop（2026.08）
-
-**技术栈：** Electron、Node.js、PowerShell、NSIS、GitHub Actions
-
-将开源 DeepSeek Harness 封装为 Windows 桌面应用，用户无需单独安装 Node.js、DeepSeek Harness 或 Microsoft Edge，下载安装包即可使用。项目已获得 100+ GitHub Stars。
-
-- 使用 Electron 自带 Node 启动和管理 `dsh` 服务，实现单实例锁、关窗停服与服务进程树清理
-- 内置插件商城、插件启停、主题色和背景图自定义，并预装常用 Web UI 扩展
-- 通过运行时裁剪移除多平台二进制、调试文件、类型声明和文档，将安装包从约 150 MB 降至约 99 MB
-- GitHub Actions 每日跟踪上游版本、自动打包并发布 NSIS 安装包
-
-**链接：** [源码](https://github.com/chnnasn/DeepSeek-Harness-Desktop) · [最新版本](https://github.com/chnnasn/DeepSeek-Harness-Desktop/releases/tag/v0.1.5-rc.1)
-
-## 03 · ekit（2026.08）
+### ekit（2026.08）
 
 **技术栈：** C++20、ECS、Sparse Set、Thread Pool、CMake
 
@@ -43,21 +34,7 @@
 
 **链接：** [源码](https://github.com/chnnasn/ekit) · [v0.1.0](https://github.com/chnnasn/ekit/releases/tag/v0.1.0)
 
-## 04 · Fire（2026.07）
-
-**技术栈：** Unity、C#、URP、Compute Shader、AI Navigation、Input System
-
-一款低多边形 FPS 丧尸波次生存游戏。项目基于第三方 FPS 框架完成角色和武器基础能力，并在此基础上实现敌人 AI、群体导航、波次、成长、对象池、技能和移动端输入适配。
-
-- 实现敌人 `Birth / Chase / Attack / Dead` 状态机，以及基于 BFS 的共享 FlowField 群体导航
-- 使用 SpatialGrid 支撑邻居查询、局部避让和刷怪合法性检查，并支持 FlowField 局部重建
-- 通过 AI LOD、导航分批更新、对象池和 NonAlloc API 降低大量敌人同时更新时的 CPU 与 GC 压力
-- 接入 Compute Shader GPU Skinning 路径与标准渲染回退，并以 ScriptableObject 分离波次、Buff、敌人和地图配置
-- 独立实现经验升级、随机 Buff、自动技能及移动端触控输入适配
-
-**链接：** [源码](https://github.com/chnnasn/Fire)
-
-## 05 · TomCat_Engine（2025.09）
+### TomCat_Engine（2025.09）
 
 **技术栈：** C++20、OpenGL 4.6、Dear ImGui、Box2D、.NET 10、CMake/Premake
 
@@ -72,7 +49,25 @@
 
 **链接：** [源码](https://github.com/chnnasn/TomCat_Engine) · [v0.1.0](https://github.com/chnnasn/TomCat_Engine/releases/tag/v0.1.0)
 
-## 06 · Cat_Coffee（2025.02）
+## Unity 游戏开发
+
+覆盖战斗 AI、群体导航、性能优化、玩法系统与完整游戏原型。
+
+### Fire（2026.07）
+
+**技术栈：** Unity、C#、URP、Compute Shader、AI Navigation、Input System
+
+一款低多边形 FPS 丧尸波次生存游戏。项目基于第三方 FPS 框架完成角色和武器基础能力，并在此基础上实现敌人 AI、群体导航、波次、成长、对象池、技能和移动端输入适配。
+
+- 实现敌人 `Birth / Chase / Attack / Dead` 状态机，以及基于 BFS 的共享 FlowField 群体导航
+- 使用 SpatialGrid 支撑邻居查询、局部避让和刷怪合法性检查，并支持 FlowField 局部重建
+- 通过 AI LOD、导航分批更新、对象池和 NonAlloc API 降低大量敌人同时更新时的 CPU 与 GC 压力
+- 接入 Compute Shader GPU Skinning 路径与标准渲染回退，并以 ScriptableObject 分离波次、Buff、敌人和地图配置
+- 独立实现经验升级、随机 Buff、自动技能及移动端触控输入适配
+
+**链接：** [源码](https://github.com/chnnasn/Fire)
+
+### Cat_Coffee（2025.02）
 
 **技术栈：** Unity、C#、等距网格、DOTween、UGUI
 
@@ -85,7 +80,7 @@
 
 **链接：** [源码](https://github.com/chnnasn/Cat_Coffee)
 
-## 07 · Light（2024.10）
+### Light（2024.10）
 
 **技术栈：** Unity、C#、2D Physics、URP、Input System、AssetBundle
 
@@ -99,7 +94,7 @@
 
 **链接：** [源码](https://github.com/chnnasn/Light)
 
-## 08 · Reverse Loop / TencentGameJam（2024.09）
+### Reverse Loop / TencentGameJam（2024.09）
 
 **技术栈：** Unity、C#、URP、2D Physics、Line Renderer、UGUI
 
@@ -113,7 +108,7 @@
 
 **链接：** [源码](https://github.com/chnnasn/TencentGameJam)
 
-## 09 · Shelter（2024.09）
+### Shelter（2024.09）
 
 **技术栈：** Unity、C#、QFramework、UGUI、Tilemap、Particle System
 
@@ -126,6 +121,27 @@
 - 使用 QFramework 拆分关卡、建筑、物品和探索数据模型，并接入 UGUI 与粒子反馈
 
 **链接：** [源码](https://github.com/chnnasn/Shelter)
+
+---
+
+更多代码与更新请见 [GitHub @chnnasn](https://github.com/chnnasn)。
+
+## 桌面工具与工程化
+
+围绕 Electron、Node.js、自动打包与持续发布，展示桌面产品交付能力。
+
+### DeepSeek-Harness-Desktop（2026.08）
+
+**技术栈：** Electron、Node.js、PowerShell、NSIS、GitHub Actions
+
+将开源 DeepSeek Harness 封装为 Windows 桌面应用，用户无需单独安装 Node.js、DeepSeek Harness 或 Microsoft Edge，下载安装包即可使用。项目已获得 100+ GitHub Stars。
+
+- 使用 Electron 自带 Node 启动和管理 `dsh` 服务，实现单实例锁、关窗停服与服务进程树清理
+- 内置插件商城、插件启停、主题色和背景图自定义，并预装常用 Web UI 扩展
+- 通过运行时裁剪移除多平台二进制、调试文件、类型声明和文档，将安装包从约 150 MB 降至约 99 MB
+- GitHub Actions 每日跟踪上游版本、自动打包并发布 NSIS 安装包
+
+**链接：** [源码](https://github.com/chnnasn/DeepSeek-Harness-Desktop) · [最新版本](https://github.com/chnnasn/DeepSeek-Harness-Desktop/releases/tag/v0.1.5-rc.1)
 
 ---
 
